@@ -19,7 +19,7 @@ if __name__ == "__main__":
         if b == 0:
             exit(1)
 
-        result= calc.div(a, b)
+        result = calc.div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
