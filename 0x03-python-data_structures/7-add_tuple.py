@@ -7,6 +7,7 @@ def assign_terms(tuple_x, len_x):
     else:
         return int(tuple_x[0]), int(tuple_x[1])
 
+
 def add_tuple(tuple_a=(), tuple_b=()):
     a1, a2 = assign_terms(tuple_a, len(tuple_a))
     b1, b2 = assign_terms(tuple_b, len(tuple_b))
