@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    if my_list is None:
+    if not my_list:
         return 0
 
     sum_weight = 0
@@ -9,4 +9,4 @@ def weight_average(my_list=[]):
         sum_weight += project[1]
         sum_score += project[0] * project[1]
 
-    return (float(sum_score) / float(sum_weight))
+    return (sum_score / sum_weight)
