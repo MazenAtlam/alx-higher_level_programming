@@ -25,7 +25,6 @@ Args: size (int): Length of the square
 
         self.__size = size
 
-
     @property
     def size(self):
         """A property for the private attribute 'size' as getter
@@ -39,17 +38,15 @@ If size is less than 0, it will raise a ValueError with massage
 """
         return self.__size
 
-
     @size.setter
     def size(self, value):
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError('size must be an integer')
 
         if value < 0:
             raise ValueError('size must be >= 0')
 
         self.__size = value
-
 
     def area(self):
         """A puplic method that gets the current square area
