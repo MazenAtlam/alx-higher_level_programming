@@ -41,4 +41,4 @@ Args: Nothing
 Returns: The current square area
 """
 
-        return size**2
+        return self.__size**2
