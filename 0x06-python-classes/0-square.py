@@ -3,18 +3,17 @@
 """
 This module has an empty class
 
-Attributes:
-	Nothing
+Attributes: Nothing
 
-Todo:
-	Nothing
+Todo: Nothing
 """
 
+
 class Square:
-	"""Empty class
+    """Empty class
 
-	Attributes:
-		Nothing
-	"""
 
-	pass
+Attributes: Nothing
+"""
+
+    pass
