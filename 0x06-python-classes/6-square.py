@@ -23,8 +23,8 @@ Attributes: size (private attribute)
 Args: size (int): Length of the square
 """
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -63,12 +63,8 @@ it will raise a TypeError with massage
 
     @position.setter
     def position(self, value):
-        if type(value) is not tuple:
+        if type(value) is not tuple or len(value) > 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-
-        for i in value:
-            if i > 2:
-                raise TypeError('position must be a tuple of 2 positive integers')
 
         self.__position = value
 
