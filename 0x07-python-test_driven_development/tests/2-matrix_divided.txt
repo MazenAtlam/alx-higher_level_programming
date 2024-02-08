@@ -78,3 +78,11 @@ raise a ``ZeroDivisionError`` exception.
 	Traceback (most recent call last):
 	...
 	ZeroDivisionError: division by zero
+
+If you try to divide by infinity or -infinity,
+it will return a zero matrix of same size
+
+	>>> matrix_divided([[5, 4], [99, 100]], float('inf'))
+	[[0.0, 0.0], [0.0, 0.0]]
+	>>> matrix_divided([[5, 4], [99, 100]], - float('inf'))
+	[[-0.0, -0.0], [-0.0, -0.0]]
