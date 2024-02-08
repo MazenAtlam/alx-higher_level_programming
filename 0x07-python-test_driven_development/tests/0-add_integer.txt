@@ -35,6 +35,8 @@ they are casted to integers.
 
 	>>> add_integer(6, 2.5)
 	8
+	>>> add_integer(float("NaN"), float("NaN"))
+	0
 
 Non-Numbers
 ===========

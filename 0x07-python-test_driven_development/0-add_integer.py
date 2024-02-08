@@ -6,7 +6,6 @@
 
 """
 
-
 def add_integer(a, b=98):
     """A function that adds two integers
     Floats are casted to integers
@@ -25,10 +24,13 @@ def add_integer(a, b=98):
     if type(b) not in (int, float):
         raise TypeError('b must be an integer')
 
-    return int(a) + int(b)
+    try:
+        a = int(a)
+    except ValueError:
+        a = 0
+    try:
+        b = int(b)
+    except ValueError:
+        b = 0
 
-
-if __name__ == '__main__':
-    import doctest
-
-    doctest.testfile(tests/0-add_integer.txt)
+    return a + b
