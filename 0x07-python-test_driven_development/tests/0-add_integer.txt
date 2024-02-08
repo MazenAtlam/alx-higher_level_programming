@@ -1,0 +1,59 @@
+===============================
+ How to Use 0-add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer(a, b=98)``.
+
+Numbers
+=======
+
+``add_integer(a, b=98)`` returns the sum of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(5, 10)
+	15
+	>>> add_integer(-1, 6)
+	5
+	>>> add_integer(-7, -9)
+	-16
+
+It can work with at least one argument as by default the second will be 98
+
+::
+
+	>>> add_integer(2)
+	100
+
+It also works with floating-point values. But first,
+they are casted to integers.
+
+::
+
+	>>> add_integer(6, 2.5)
+	8
+
+Non-Numbers
+===========
+
+``a`` and ``b`` must be integers or floats, otherwise
+raise a ``TypeError`` exception with the message
+``a must be an integer`` or ``b must be an integer``
+
+::
+
+	>>> add_integer(True, 10) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>> add_integer(-1, "School") #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+	>>> add_integer(None) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
