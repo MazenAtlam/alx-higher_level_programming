@@ -51,11 +51,11 @@ raise a ``TypeError`` exception with the message
 	Traceback (most recent call last):
 	...
 	TypeError: first_name must be a string
-	>>> say_my_name("Anas", -5) #doctest: +ELLIPSIS
+	>>> say_my_name("Anas", 100) #doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	...
 	TypeError: last_name must be a string
-	>>> say_my_name(None, 4) #doctest: +ELLIPSIS
+	>>> say_my_name(None, -5) #doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	...
 	TypeError: first_name must be a string
