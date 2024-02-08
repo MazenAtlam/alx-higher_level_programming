@@ -29,7 +29,6 @@ with a message ``size must be >= 0``.
 	##
 	##
 	>>> print_square(0)
-	<BLANKLINE>
 	>>> print_square(-7) #doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	...
