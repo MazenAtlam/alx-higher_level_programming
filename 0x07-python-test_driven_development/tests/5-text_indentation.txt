@@ -1,0 +1,68 @@
+===================================
+ How to Use 5-text_indentation.txt
+===================================
+
+This library is very simple, since it only has one function called
+``text_indentation(text)`` . That prints a text with 2 new lines after
+each of these characters: '.', '?' and ':'. And
+There is no space at the beginnig or at the end of each printed line
+
+
+missing arguments
+==================
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation() #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument:
+		'text'
+
+Strings
+========
+
+``text`` must be a string.
+
+::
+
+	>>> text_indentation("""This is some text for testing: \
+	... Done with first sign?Now, we done with two. Finshed!""")
+	This is some text for testing:
+	<BLANKLINE>
+	Done with first sign?
+	<BLANKLINE>
+	Now, we done with two.
+	<BLANKLINE>
+	Finshed!
+
+It also works if Characters are not found
+
+	>>> text_indentation("""There is no signs here and it works!""")
+	There is no signs here and it works!
+
+Non-Strings
+============
+
+If ``text`` is not a string, A ``TypeError`` exception will be raised
+with the message ``text must be a string``
+
+::
+
+	>>> text_indentation(True) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation(100) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation(-9.1) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation(None) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
