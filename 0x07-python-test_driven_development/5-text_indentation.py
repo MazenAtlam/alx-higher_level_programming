@@ -33,4 +33,4 @@ def text_indentation(text):
         replaced_txt = replaced_txt.replace(sign + ' ', sign)
         replaced_txt = replaced_txt.replace(sign, sign + '\n\n')
 
-    print(replaced_txt)
+    print(replaced_txt, end='')
