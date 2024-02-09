@@ -20,6 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         """A method to test the argument ``list``"""
 
         self.assertIsNone(max_integer())
+        self.assertEqual(max_integer([99]), 99)
         self.assertEqual(max_integer([49, 51, 60]), 60)
         self.assertEqual(max_integer([-10, -5, -9]), -5)
         self.assertEqual(max_integer([4, -5, 0]), 4)
