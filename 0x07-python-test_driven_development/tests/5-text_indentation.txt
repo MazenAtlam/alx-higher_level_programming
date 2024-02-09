@@ -42,6 +42,18 @@ It also works if Characters are not found
 	>>> text_indentation("""There is no signs here and it works!""")
 	There is no signs here and it works!
 
+Even there is spaces in 'text', it will print no spaces at the
+beginning or at the end of each printed line
+
+	>>> text_indentation("Holberton. School? How are you:    John")
+	Holberton.
+	<BLANKLINE>
+	School?
+	<BLANKLINE>
+	How are you:
+	<BLANKLINE>
+	John
+
 Non-Strings
 ============
 

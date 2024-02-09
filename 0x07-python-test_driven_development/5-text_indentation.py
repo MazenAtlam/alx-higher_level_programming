@@ -30,7 +30,9 @@ def text_indentation(text):
 
     replaced_txt = text
     for sign in ['.', '?', ':']:
-        replaced_txt = replaced_txt.replace(sign + ' ', sign)
+        spaces = sign + ' '
+        while spaces in replaced_txt:
+            replaced_txt = replaced_txt.replace(spaces, sign)
         replaced_txt = replaced_txt.replace(sign, sign + '\n\n')
 
     print(replaced_txt, end='')
