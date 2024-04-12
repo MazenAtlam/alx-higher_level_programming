@@ -77,18 +77,15 @@ class Square:
         """A method to print the square at certain position
         """
 
-        data = ''
-        if self.size == 0:
-            data += '\n'
-        else:
+        if self.size != 0:
             for i in range(self.position[1]):
-                data += '\n'
+                print()
             for i in range(self.size):
                 for j in range(self.position[0]):
-                    data += ' '
+                    print(' ', end='')
                 for k in range(self.size):
-                    data += '#'
+                    print('#', end='')
                 if i != self.size - 1:
-                    data += '\n'
+                    print()
 
-        return data
+        return ""
