@@ -26,12 +26,6 @@ class Square:
         self.size = size
         self.position = position
 
-    def __str__(self):
-        """A special method to custom the print statement of instances
-        """
-
-        return self.my_print()
-
     @property
     def size(self):
         """A getter&setter proerty of the size private attribute
@@ -69,6 +63,8 @@ class Square:
         type(value[1]) is not int or value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integer')
 
+        self.__position = value
+
     def area(self):
         """A method that computes the area of the square
 
@@ -77,20 +73,20 @@ class Square:
 
         return size * size
 
-    def my_print(self):
+    def __str__(self):
         """A method to print the square at certain position
         """
 
-        if size == 0:
-            print()
-            return
-
-        for i in range(position[1]):
-            print()
-
-        for i in range(size):
-            for j in range(position[0]):
-                print('_', end='')
-            for k in range(size):
-                print('#', end='')
-            print()
+        data = ''
+        if self.size == 0:
+            data += '\n'
+        else:
+            for i in range(self.position[1]):
+                data += '\n'
+            for i in range(self.size):
+                for j in range(self.position[0]):
+                    data += ' '
+                for k in range(self.size):
+                    data += '#'
+                data += '\n'
+        return data
