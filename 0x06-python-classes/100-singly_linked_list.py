@@ -7,6 +7,8 @@
 
     Todo: Create a singly linked list
 """
+
+
 class Node:
     """A class to make a node for the singly linked list
 
@@ -27,7 +29,7 @@ class Node:
     @property
     def data(self):
         """data getter&setter property
-        
+
         Raises:
             TypeError: If the value is not of type int
 
@@ -39,9 +41,9 @@ class Node:
     @property
     def next_node(self):
         """next_node getter&setter property
-        
+
         Raises:
-            TypeError: If the value is not of type Node or None 
+            TypeError: If the value is not of type Node or None
 
         Returns:
             Node: the next node in the linked list
@@ -65,7 +67,7 @@ class Node:
 
 class SinglyLinkedList:
     """A class to create a singly linked list
-    
+
     Attributes:
         head (private): the head node of the linked list
     """
