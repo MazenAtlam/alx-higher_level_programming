@@ -11,6 +11,9 @@ def write_file(filename="", text=""):
     Args:
         filename (str, optional): The name of the text file. Defaults to "".
         text (str, optional): The string to be written. Defaults to "".
+    
+    Return:
+        The number of characters written
     """
     with open(filename, mode='w', encoding="utf-8") as file:
         no_of_chars = file.write(text)
