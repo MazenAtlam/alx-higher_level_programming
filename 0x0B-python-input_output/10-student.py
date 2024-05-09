@@ -25,11 +25,24 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """A method that retrievesa dictionary representation
         of a Student instance
+
+        - If attrs is a list of strings,
+            only attribute names contained in this list must be retrieved.
+        - Otherwise, all attributes must be retrieved
 
         Returns:
             dict: a dictionary representation of a Student instance
         """
-        return self.__dict__
+        attrs_dict = dict()
+        if attrs is not None and isinstance(attrs, list):
+            for element in attrs:
+                if not isinstance(element, str):
+                    return self.__dict__
+
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                attrs_dict.update({key: value})
+        return attrs_dict
