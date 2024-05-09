@@ -3,6 +3,20 @@
 """This module has a class Student that defines a student
 """
 
+def is_str_list(a_list):
+    """A function that checks if a list contains only strings
+
+    Args:
+        list (list): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    for element in a_list:
+            if not isinstance(element, str):
+                return False
+    return True
+
 
 class Student:
     """A class Student that defines a student
@@ -37,12 +51,13 @@ class Student:
             dict: a dictionary representation of a Student instance
         """
         attrs_dict = dict()
-        if attrs is not None and isinstance(attrs, list):
-            for element in attrs:
-                if not isinstance(element, str):
-                    return self.__dict__
+        if not attrs or isinstance(attrs, list) == False:
+            return self.__dict__
 
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                attrs_dict.update({key: value})
-        return attrs_dict
+        if is_str_list(attrs):
+            for key, value in self.__dict__.items():
+                if key in attrs:
+                    attrs_dict.update({key: value})
+            return attrs_dict
+
+        return self.__dict__
