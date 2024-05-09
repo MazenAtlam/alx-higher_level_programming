@@ -37,7 +37,7 @@ class Student:
             dict: a dictionary representation of a Student instance
         """
         attrs_dict = dict()
-        if not attrs or isinstance(attrs, list) == False:
+        if not attrs or isinstance(attrs, list) is False:
             return self.__dict__
 
         for element in attrs:
