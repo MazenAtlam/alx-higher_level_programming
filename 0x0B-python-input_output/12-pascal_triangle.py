@@ -15,13 +15,18 @@ def pascal_triangle(n):
         A list of lists of integers or empty list if n is less than or equal 0
     """
     p_triangle = []
+
     if n > 0:
         p_triangle = [[1]]
+
         for i in range(1, n):
-            triangle_i = [1]
+            curr_triangle = [1]
+            prev_triangle = p_triangle[i - 1]
+
             for j in range(1, i):
-                triangle_i.append(p_triangle[i - 1][j - 1] + p_triangle[i - 1][j])
-            triangle_i.append(1)
-            p_triangle.append(triangle_i)
+                curr_triangle.append(prev_triangle[j - 1] + prev_triangle[j])
+
+            curr_triangle.append(1)
+            p_triangle.append(curr_triangle)
 
     return p_triangle
