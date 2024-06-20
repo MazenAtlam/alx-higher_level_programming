@@ -3,6 +3,6 @@ exports.logMe = function (item) {
   if (this.count === undefined) {
     this.count = 0;
   }
-  console.log(`${count}: ${item}`);
-  count++;
+  console.log(`${this.count}: ${item}`);
+  this.count++;
 };
