@@ -7,11 +7,11 @@
             },
             "previewLimit": 50,
             "server": "localhost",
-            "port": 3306,
+            "port": 3305,
             "driver": "MySQL",
-            "name": "root",
-            "username": "mazen",
+            "name": "mazen",
             "database": "hello",
+            "username": "root",
             "password": "M.Atlam10_MySQL"
         }
     ]
