@@ -15,13 +15,11 @@ if (url !== undefined) {
     if (err) {
       // Error while the GET request
       console.log(err);
-
     } else {
       // Print yhe status code
-      console.log('code: ', res.statusCode);
+      console.log('code:', res.statusCode);
     }
   });
-
 } else {
   // Invalid input format
   console.log('Usage: ./2-statuscode.js url');
