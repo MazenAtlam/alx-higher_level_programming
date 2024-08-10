@@ -13,7 +13,7 @@ const file = args[2];
 // Get the string to write
 const string = args[3];
 
-if (file !== undefined || string !== undefined) {
+if (file !== undefined && string !== undefined) {
   // Write the string into the file
   fs.writeFile(file, string, { encoding: 'utf8' }, (err) => {
     if (err) {
