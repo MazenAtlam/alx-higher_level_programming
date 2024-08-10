@@ -26,8 +26,8 @@ if (url !== undefined) {
         movie.characters.forEach((character) => {
           if (characterID.test(character)) {
             moviesCount += 1;
-	  }
-	});
+          }
+        });
       });
 
       // Print the number of movies
