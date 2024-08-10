@@ -19,13 +19,13 @@ if (url !== undefined) {
     } else {
       // Find the movies where the character “Wedge Antilles” is present
       const allMovies = body.results;
-      const characterID = "https://swapi-api.alx-tools.com/api/people/18/";
+      const characterID = 'https://swapi-api.alx-tools.com/api/people/18/';
       let moviesCount = 0;
 
       allMovies.forEach((movie) => {
         if (movie.characters.includes(characterID)) {
           moviesCount += 1;
-	}
+        }
       });
 
       // Print the number of movies
