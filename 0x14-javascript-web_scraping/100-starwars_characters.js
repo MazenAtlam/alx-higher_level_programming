@@ -30,8 +30,8 @@ if (movieID !== undefined) {
           } else {
             // Print the character name
             console.log(body.name);
-	  }
-	});
+          }
+        });
       });
     }
   });
