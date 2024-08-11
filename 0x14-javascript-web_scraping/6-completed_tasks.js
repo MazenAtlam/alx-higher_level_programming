@@ -29,6 +29,13 @@ if (url !== undefined) {
         }
       });
 
+      // Filter users who did not complete any task
+      Object.keys(completed).forEach((userID) => {
+        if (completed[userID] === 0) {
+          delete completed[userID];
+        }
+      });
+
       // Print the number of completed tasks by user id
       console.log(completed);
     }
