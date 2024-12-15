@@ -97,11 +97,14 @@ class Rectangle:
     def __str__(self):
         """A pretty string representation of the rectangle"""
 
+        rectangle_str = ""
         if self.isEmpty():
-            print()
-            return
+            return rectangle_str
 
-        for _ in range(self.height):
+        for length in range(self.height):
             for _ in range(self.width):
-                print("#", end='')
-            print()
+                rectangle_str += '#'
+            if length != self.height - 1:
+                rectangle_str += '\n'
+
+        return rectangle_str
